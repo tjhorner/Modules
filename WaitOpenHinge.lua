@@ -1,15 +1,15 @@
 --[[ 
 	
 	Designates and opens a hinge joint, then closes it after a set time
-	Usage: WaitOpenHinge(The effected model, the origin to rotate around, the angle rotated, ticks given to finish, time it stays open)
+	Usage: WaitOpenHinge(The affected model, the origin to rotate around, the angle rotated, ticks given to finish, time it stays open)
 	
 ]]--
 
-function WaitOpenHinge(model,origin,angle,time,set)
+function WaitOpenHinge(model, origin, angle, time, set)
 	local interval = angle/time	
 	-- Creat a function to Open it one rotation
 	local function OpenHinge(model,origin,interval)
-		-- Calculate it's CFrame and transformations
+		-- Calculate its CFrame and transformations
 		local function RotateModel(model,origin,interval)
 			local parts = {}
 			for i,v in pairs(model:GetChildren()) do
